@@ -36,7 +36,3 @@ if __name__ == "__main__":
     X_loaded, Y_loaded, m_fit, b_fit = fit_line_from_csv()
 
     plot_results(X_loaded, Y_loaded, m_true, b_true, m_fit, b_fit)
-
-    # Print results for reference
-    print(f"Original m: {m_true}, b: {b_true}")
-    print(f"Fitted m: {m_fit:.3f}, b: {b_fit:.3f}")
