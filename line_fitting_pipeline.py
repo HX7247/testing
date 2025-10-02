@@ -19,13 +19,13 @@ def fit_line_from_csv(filename="synthetic_data.csv"):
     m_fit, b_fit = np.polyfit(X, Y, 1)
     return X, Y, m_fit, b_fit
 
-def plot_results(X, Y, m_true, b_true, m_fit, b_fit, filename="fit_plot.png"):
+def plot_results(X, Y, m_true, b_true, m_fit, b_fit, filename="synthetic_plot.png"):
     plt.figure(figsize=(8, 6))
     plt.scatter(X, Y, label="Data", color="blue", alpha=0.5)
     plt.plot(X, m_true * X + b_true, label="Original Line", color="green", linestyle="--")
     plt.plot(X, m_fit * X + b_fit, label="Best Fit Line", color="red")
-    plt.xlabel("X")
-    plt.ylabel("Y")
+    plt.xlabel("X-Axis")
+    plt.ylabel("Y-Axis")
     plt.legend()
     plt.title("Line Fitting: Original vs Best Fit")
     plt.savefig(filename)
@@ -34,5 +34,4 @@ def plot_results(X, Y, m_true, b_true, m_fit, b_fit, filename="fit_plot.png"):
 if __name__ == "__main__":
     X, Y, m_true, b_true = generate_synthetic_data()
     X_loaded, Y_loaded, m_fit, b_fit = fit_line_from_csv()
-
     plot_results(X_loaded, Y_loaded, m_true, b_true, m_fit, b_fit)
