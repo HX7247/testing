@@ -19,3 +19,6 @@ class TestMyFunction(unittest.TestCase):
 
     def test_subtraction_3(self):
         self.assertEqual(subtraction(-1, -1), 0)
+
+if __name__ == '__main__':
+    unittest.main()
