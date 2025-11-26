@@ -12,7 +12,7 @@ This repository contains a small pipeline to:
   - generate_synthetic_data(m, b, num_points, x_range, noise_std, filename)
   - fit_line_from_csv(filename)
   - plot_results(X, Y, m_true, b_true, m_fit, b_fit, filename)
-- line_unit_test.py — unit test for the pipeline (uses unittest).
+- line_unit_test.py — unit test for the pipeline.
 - unit_test.py — simple unit tests for addition/subtraction helpers.
 - test_function.py — sample functions used by `unit_test.py`.
 
@@ -48,8 +48,6 @@ python -m unittest discover -v
 The unit test `line_unit_test.py` generates a small test CSV and asserts the fitted slope/intercept are close to the true values. Tolerances used in the test are:
 - slope (m): delta=0.2
 - intercept (b): delta=0.5
-
-Adjust noise or tolerances in tests if you change the data generation parameters.
 
 ## Notes
 - The random seed in `generate_synthetic_data` is fixed for reproducibility.
